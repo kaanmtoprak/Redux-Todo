@@ -3,7 +3,7 @@ import { useDispatch,useSelector } from 'react-redux'
 import Error from './Error'
 
 
-import { addTodoAsync } from '../redux/todos/todosSlice'
+import { addTodoAsync } from '../redux/todos/services'
 
 const Form = ({message}) => {
 	const [title,setTitle] = useState('')
@@ -22,7 +22,7 @@ const Form = ({message}) => {
   return (
     
         		<form style={{display:'flex',alignItems:'center'}} onSubmit={handleSubmit}>
-			<input disabled={isLoading} className="new-todo" placeholder="What needs to be done?" autoFocus value={title} onChange={(e)=>setTitle(e.target.value)} />
+			<input disabled={isLoading} className="new-todo" placeholder="Bir Şey Ekle..." autoFocus value={title} onChange={(e)=>setTitle(e.target.value)} />
 			{
 				isLoading && <span style={{paddingRight:10}}>Loading...</span>
 			}

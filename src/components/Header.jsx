@@ -4,7 +4,7 @@ import Form from './Form'
 const Header = () => {
   return (
     <header className='header'>
-        		<h1>todos</h1>
+        		<h1>Yapılacaklar</h1>
         <Form/>
     </header>
   )
